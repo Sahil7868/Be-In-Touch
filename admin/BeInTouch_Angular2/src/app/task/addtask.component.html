@@ -1,0 +1,27 @@
+<app-header></app-header>
+
+<h1>
+  Add Task
+</h1>
+
+<form (ngSubmit)="addtask()" name="Add">
+<div class="input-group">
+  <span class="input-group-addon" id="basic-addon1">Enter Id:</span>
+  <td><input name="Id" [(ngModel)]="Id" type="text" class="form-control" /></td>
+</div>
+<br/>
+
+<div class="input-group">
+  <span class="input-group-addon" id="basic-addon1">Enter Title:</span>
+  <td><input name="Title" [(ngModel)]="Title" type="text" class="form-control" /></td>
+</div>
+<br/>
+
+<div class="input-group">
+  <span class="input-group-addon" id="basic-addon1">Enter Status:</span>
+  <td><input name="Status" [(ngModel)]="Status" type="text" class="form-control"  /></td>
+</div>
+<br/>
+
+<input type="submit" />
+</form>

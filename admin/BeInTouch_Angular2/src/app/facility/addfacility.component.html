@@ -1,0 +1,48 @@
+ <div id="wrapper">
+ 
+      <app-sildnav></app-sildnav>
+    
+    <div id="page-wrapper">
+       <div class="row">
+
+         <h6> . </h6>
+         </div>
+
+<div class="col-md-12 col-sd-12" style="margin-left: 320px;">
+  <div class="col-md-6 col-sd-6">
+<div class="panel panel-success" background-color=#080606>
+  <div class="panel-heading" *ngIf="facility_id==0" >Add Facilities Here</div>
+  <div class="panel-heading" *ngIf="facility_id!=0" >Edit Facilities Here</div>
+  <div class="panel-body">
+<div>
+<br/>
+<form (ngSubmit)="addfacility()" #addform="ngForm">
+
+<!--<div class="input-group">
+  <span class="input-group-addon" id="basic-addon1">subcat Id</span>
+  <input type="text" [(ngModel)]="subcat_id" name="subcat_id" class="form-control" placeholder="subcat_id" aria-describedby="basic-addon1">
+</div>-->
+
+<div class="input-group">
+  <span class="input-group-addon" id="basic-addon1">Name </span>
+  <input type="text" [(ngModel)]="facility_name" name="facility_name" class="form-control" placeholder="Amenities" aria-describedby="basic-addon1" 
+   required >
+</div>
+<br/>
+
+<div class="btn-group" role="group">
+    <button type="submit" *ngIf="facility_id==0" [disabled]="!addform.form.valid" class="btn btn-success" style="margin-left: 250px;">Save</button>
+  </div>
+  <div class="btn-group" role="group">
+    <button type="submit" *ngIf="facility_id!=0" [disabled]="!addform.form.valid" class="btn btn-success" style="margin-left: 250px;">Save</button>
+  </div>
+</form>
+</div>
+  </div>
+</div>
+  </div>
+</div>
+
+    </div>
+ </div>
+

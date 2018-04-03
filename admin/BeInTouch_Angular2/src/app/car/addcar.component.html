@@ -1,0 +1,104 @@
+ <div id="wrapper">
+ 
+      <app-sildnav></app-sildnav>
+    
+    <div id="page-wrapper">
+       <div class="row">
+
+         <h6> . </h6>
+         </div>
+
+
+
+
+
+
+
+
+<div class="row">
+<div class="col-md-3 col-xs-3">
+  </div>
+<div class="col-md-6 col-xs-6">
+ <div class="panel panel-success" background-color=#080606>
+     <div class="panel-heading" >Add Car Here</div>
+     <div class="panel-body">
+    <div>
+      <br/>
+
+      <form (ngSubmit)="addcar()" #addform="ngForm">
+  
+
+
+<div class="input-group">
+  <span class="input-group-addon" id="basic-addon1">Enter Car Name:</span> 
+  <td><input name="carname" [(ngModel)]="carname" type="text" class="form-control" required /></td>
+</div>
+<br/>
+
+<div class="input-group">
+  <span class="input-group-addon" id="basic-addon1">Enter Cartype Id:</span>
+  <td><input name="fktypeid" [(ngModel)]="fktypeid" type="number" class="form-control" required /></td>
+</div>
+<br/>
+
+<div class="input-group">
+  <span class="input-group-addon" id="basic-addon1">Enter Car Image:</span>
+  <td><input name="carimage1" [(ngModel)]="carimage1" type="text" class="form-control" required /></td>
+</div>
+<br/>
+
+<div class="input-group">
+  <span class="input-group-addon" id="basic-addon1">Enter Car Details:</span>
+  <td><input name="cardetails" [(ngModel)]="cardetails" type="text" class="form-control" required /></td>
+</div>
+<br/>
+
+<div class="input-group">
+  <span class="input-group-addon" id="basic-addon1">Enter Car Number:</span>
+  <td><input name="carnum" [(ngModel)]="carnum" type="number" class="form-control" required/></td>
+</div>
+<br/>
+
+<div class="input-group">
+  <span class="input-group-addon" id="basic-addon1">Enter Car Image:</span>
+  <td><input name="carimage2" [(ngModel)]="carimage2" type="text" class="form-control" required/></td>
+</div>
+<br/>
+
+<div class="input-group">
+  <span class="input-group-addon" id="basic-addon1">Enter Car Image:</span>
+  <td><input name="carimage3" [(ngModel)]="carimage3" type="text" class="form-control" required /></td>
+</div>
+<br/>
+
+<div class="input-group">
+  <span class="input-group-addon" id="basic-addon1">Enter Car Capacity:</span>
+  <td><input name="capacity" [(ngModel)]="capacity" type="number" class="form-control" required/></td>
+</div>
+<br/>
+
+<div class="input-group">
+  <span class="input-group-addon" id="basic-addon1">Enter Driver Id:</span>
+  <td><input name="fkdriverid" [(ngModel)]="fkdriverid" type="number" class="form-control" required /></td>
+</div>
+<br/>
+
+<div class="btn-group" role="group">
+<button type="submit" [disabled]="!addform.form.valid" class="btn btn-success" style="margin-left: 250px;">Add Bus</button>
+</div>
+</form>
+
+</div>
+
+</div>
+
+
+</div>
+</div>
+
+
+<div class="col-md-3 col-xs-3">
+  </div>
+</div>
+    </div>
+ </div>

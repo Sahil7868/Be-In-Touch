@@ -1,0 +1,77 @@
+
+
+  <div id="wrapper">
+ 
+      <app-sildnav></app-sildnav>
+    
+    <div id="page-wrapper">
+       <div class="row">
+
+         <h6> . </h6>
+         </div>
+     <div class="row">
+      <div class="col-md-9">
+        </div>
+          <div class="col-md-3">
+       
+      
+       <div class="input-group" style="text-align:right;">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
+      </span>
+      <input type="text" (keyup)="0" #input1 class="form-control" placeholder="Search for...">
+    </div>
+     </div>
+  </div>
+   <div class="row">
+<table class="table">
+
+<thead>
+<th style="color:seagreen;">Cust id</th>
+<th style="color:seagreen;">Mobile Number</th>
+<th style="color:seagreen;">Date</th>
+<th style="color:seagreen;">Status</th>
+<th style="color:seagreen;">Book id</th>
+<th style="color:seagreen;">email id</th>
+<th style="color:seagreen;">Amount</th>
+<th style="color:seagreen;">seat num</th>
+<th style="color:seagreen;">age</th>
+<th style="color:seagreen;">Bus name</th>
+<th style="color:seagreen;">Depart Time</th>
+<th style="color:seagreen;">Arrive Time</th>
+<th style="color:grey;">Action</th>
+</thead>
+
+<tbody>
+<tr *ngFor="let item of (allbuscust | buscustfilter:input1.value  | paginate: { itemsPerPage: 1, currentPage: page })">
+  <td>{{item.cust_id}}</td>
+ <td>{{item.mobile_num}}</td>
+ <td>{{item.date}}</td>
+ <td>{{item.status}}</td>
+ <td>{{item.fk_book_id}}</td>
+ <td>{{item.fk_email_id}}</td>
+ <td>{{item.amount}}</td>
+ <td>{{item.seat_num}}</td>
+ <td>{{item.age}}</td>
+ <td>{{item.bus_name}}</td>
+ <td>{{item.depart_time}}</td>
+ <td>{{item.arrive_time}}</td>
+ <td>
+   
+      <button (click)="deletebuscust(item)"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
+
+ </td>
+</tr>
+</tbody>
+
+</table>
+
+<div class="has-text-centered">
+   <pagination-controls (pageChange)="page = $event"></pagination-controls>
+   </div>
+
+
+</div>
+</div>
+</div>
+

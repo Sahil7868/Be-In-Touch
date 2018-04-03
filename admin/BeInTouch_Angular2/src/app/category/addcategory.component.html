@@ -1,0 +1,7 @@
+<app-header></app-header>
+<form (ngSubmit)="addCategory()">
+<input type="number" name="cat_id" [(ngModel)]="cat_id"/>
+<input type="text" name="cat_name" [(ngModel)]="cat_name" />
+<input type="text" name="cat_desc" [(ngModel)]="cat_desc" />
+<button type="submit">add category</button>
+</form>

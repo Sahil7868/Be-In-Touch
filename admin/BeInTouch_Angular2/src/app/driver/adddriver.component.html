@@ -1,0 +1,80 @@
+ <div id="wrapper">
+ 
+      <app-sildnav></app-sildnav>
+    
+    <div id="page-wrapper">
+       <div class="row">
+
+         <h6> . </h6>
+         </div>
+
+
+
+
+
+
+
+<div class="row">
+<div class="col-md-3 col-xs-3">
+  </div>
+<div class="col-md-6 col-xs-6">
+
+  <div class="panel panel-success" background-color=#080606>
+     <div class="panel-heading" >Add Driver  Here</div>
+     <div class="panel-body">
+    <div>
+      <br/>
+<form (ngSubmit)="adddriver()" #addform="ngForm">
+
+<div class="input-group">
+  <span class="input-group-addon" id="basic-addon1">Enter Name:</span>
+  <td><input name="title" [(ngModel)]="title" type="text" class="form-control"   required /></td>
+</div>
+<div class="input-group">
+  <span class="input-group-addon" id="basic-addon1">Enter mobile number:</span>
+  <td><input name="no" [(ngModel)]="no" type="number" class="form-control"    required/></td>
+</div>
+<div class="input-group">
+  <span class="input-group-addon" id="basic-addon1">Enter Address:</span>
+  <td><input name="adi" [(ngModel)]="adi" type="text" class="form-control"   required /></td>
+</div>
+<br/>
+
+<!--<div class="input-group">
+  <span class="input-group-addon" id="basic-addon1">select photo:</span>
+  <td><input   type="file" class="form-control" multiple (change)="fileChange(input)" #input  required /></td>
+</div>-->
+<div>  
+  <input type="file" multiple (change)="fileChange(input)" #input />
+</div> 
+
+
+<div *ngFor="let file_src of file_srcs; let i = index">  
+  <img [attr.src]='file_src' alt=""/>
+  
+  <p>{{ debug_size_before[i] }} bytes <b>Before</b> </p>
+  <p>{{ debug_size_after[i] }} bytes <b>After</b></p>
+</div>
+<br/>
+
+<div class="btn-group" role="group">
+<button type="submit" [disabled]="!addform.form.valid" class="btn btn-success" style="margin-left: 250px;">Add Driver</button>
+</div>
+
+
+</form>
+
+</div>
+
+</div>
+
+
+</div>
+</div>
+
+
+<div class="col-md-3 col-xs-3">
+  </div>
+</div>
+    </div>
+ </div>

@@ -1,0 +1,93 @@
+ <div id="wrapper">
+ 
+      <app-sildnav></app-sildnav>
+    
+    <div id="page-wrapper">
+       <div class="row">
+
+         <h6> . </h6>
+         </div>
+
+
+
+
+
+
+
+<div class="row">
+<div class="col-md-3 col-xs-3">
+  </div>
+<div class="col-md-6 col-xs-6">
+  <div class="panel panel-success" background-color=#080606>
+     <div class="panel-heading" >Add Bus Here</div>
+     <div class="panel-body">
+    <div>
+      <br/>
+
+      <form (ngSubmit)="addbus()" #addform="ngForm">
+  <!--<label> Add bus </label>-->
+<div class="input-group">
+  
+  <span class="input-group-addon" id="basic-addon1">Enter Bus Name:</span>
+  <td><input name="title" [(ngModel)]="title" type="text" class="form-control"   required /></td>
+</div>
+<br/>
+<div class="input-group">
+  <span class="input-group-addon" id="basic-addon1">Enter Capacity:</span>
+  <td><input name="capacity" [(ngModel)]="capacity" type="number" class="form-control"   required /></td>
+</div>
+<br/>
+<div class="input-group">
+  <span class="input-group-addon" id="basic-addon1">Enter Bus Number:</span>
+  <td><input name="bn" [(ngModel)]="bn" type="text" class="form-control"   required /></td>
+</div>
+<br/>
+<div class="input-group">
+  <span class="input-group-addon" id="basic-addon1">Enter facility:</span>
+  <input type="text" [(ngModel)]="faci" name="faci" class="form-control" placeholder="Facility" aria-describedby="basic-addon1">
+  <select class="form-control" id="faci" 
+[(ngModel)]="faci" name="faci"
+required
+ >
+<option *ngFor="let s of allfacility" [value]="s.facility_id">{{s.facility_name}}</option>
+</select>
+</div>
+<br/>
+<br/>
+<div class="input-group">
+  <span class="input-group-addon" id="basic-addon1">Enter Bus Details:</span>
+  <td><input name="de" [(ngModel)]="de" type="text" class="form-control"   required/></td>
+</div>
+<br/>
+<div class="input-group">
+  <span class="input-group-addon" id="basic-addon1">Driver Name </span>
+  <input type="text" [(ngModel)]="fk_driver_id" name="fk_driver_id" class="form-control" placeholder="driver name" aria-describedby="basic-addon1">
+  <select class="form-control" id="fk_driver_id" 
+[(ngModel)]="fk_driver_id" name="fk_driver_id"
+required
+ >
+<option *ngFor="let s of allCat" [value]="s.driver_id">{{s.name}}</option>
+</select>
+</div>
+<br/>
+
+ <div class="btn-group" role="group">
+<button type="submit" [disabled]="!addform.form.valid" class="btn btn-success" style="margin-left: 250px;">Add Bus</button>
+</div>
+</form>
+
+</div>
+
+</div>
+
+
+</div>
+</div>
+
+<div class="col-md-3 col-xs-3">
+  </div>
+
+</div>
+
+    </div>
+    </div>

@@ -1,0 +1,10 @@
+
+<app-header></app-header>
+<h1><a routerLink="/addCategory">Add</a></h1>
+<ul>
+<li *ngFor="let item of allCategory" >
+  {{item.cat_name}}
+  <a (click)="deleteCategory(item)" >Delete</a>
+</li>
+
+</ul>
