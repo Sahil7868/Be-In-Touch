@@ -4,4 +4,4 @@
 
 ## [NgxBootStrap Guid](https://valor-software.com/ngx-bootstrap/#/documentation#getting-started)
 
-##[MDBootStrap](https://mdbootstrap.com/docs/angular/getting-started/download/ss)
+## [MDBootStrap](https://mdbootstrap.com/docs/angular/getting-started/download)
